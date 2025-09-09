@@ -1,0 +1,9 @@
+{
+    "urls": [
+        ["pixelfonts/__init__.py", "pixelfonts/__init__.py"],
+        ["pixelfonts/basefont.py", "pixelfonts/basefont.py"],
+        ["pixelfonts/fonts/font3x5.py", "pixelfonts/fonts/font3x5.py"],
+        ["pixelfonts/fonts/font4x7.py", "pixelfonts/fonts/font4x7.py"]
+    ],
+    "version": "0.1.0"
+}
