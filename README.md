@@ -57,7 +57,3 @@ class MyCustomFont(BaseFont):
         # Add more characters...
     }
 ```
-
-## License
-
-MIT License
