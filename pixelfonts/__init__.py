@@ -9,5 +9,5 @@ from .basefont import BaseFont
 from .fonts.font3x5 import Font3x5
 from .fonts.font4x7 import Font4x7
 
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 __all__ = ['BaseFont', 'Font3x5', 'Font4x7']
