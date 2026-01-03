@@ -86,6 +86,34 @@ def demo_scrolling():
     except KeyboardInterrupt:
         print("Scrolling stopped")
 
+def demo_all_characters():
+    """Demo all printable ASCII characters (0x20-0x60), 3 at a time"""
+    COLOR = (0x10, 0x10, 0x10)  # Color doesn't matter for mock display
+    DISPLAY_WIDTH = 16
+    DISPLAY_HEIGHT = 8
+    DELAY = 1.0  # seconds between displays
+    
+    font = Font4x7(DISPLAY_WIDTH, DISPLAY_HEIGHT, kit.set_pixel)
+    
+    # Generate all characters from 0x20 to 0x60
+    all_chars = ''.join(chr(i) for i in range(0x20, 0x61))
+    
+    print(f"Displaying {len(all_chars)} characters, 3 at a time...")
+    
+    # Display characters 3 at a time
+    for i in range(0, len(all_chars), 3):
+        chars = all_chars[i:i+3]
+        kit.clear()
+        font.text(chars, 0, 0, COLOR)
+        kit.render()
+        print(f"Characters: {repr(chars)} (0x{ord(chars[0]):02X}", end="")
+        if len(chars) > 1:
+            print(f", 0x{ord(chars[1]):02X}", end="")
+        if len(chars) > 2:
+            print(f", 0x{ord(chars[2]):02X}", end="")
+        print(")")
+        time.sleep(DELAY)
+
 if __name__ == "__main__":
     print("pixelfont Package Demo")
     print("======================")
@@ -98,6 +126,9 @@ if __name__ == "__main__":
     
     print("\nDemo Font4x7:")
     demo_font4x7()
+    
+    print("\nDemo all ASCII characters (0x20-0x60):")
+    demo_all_characters()
     
     print("\nDemo scrolling text (press Ctrl+C to stop):")
     demo_scrolling()
