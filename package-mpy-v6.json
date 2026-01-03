@@ -5,5 +5,5 @@
         ["pixelfonts/fonts/font3x5.mpy", "pixelfonts/fonts/font3x5.mpy"],
         ["pixelfonts/fonts/font4x7.mpy", "pixelfonts/fonts/font4x7.mpy"]
     ],
-    "version": "0.1.2"
+    "version": "0.2.0"
 }
