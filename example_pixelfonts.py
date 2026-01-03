@@ -64,7 +64,7 @@ def demo_scrolling():
     COLOR = (0x10, 0x10, 0x10)  # Color doesn't matter for mock display
     DISPLAY_WIDTH = 16
     DISPLAY_HEIGHT = 8
-    SCROLL_TEXT = "0123456789"
+    SCROLL_TEXT = "0123456789 ERR"
     SCROLL_SPEED = 0.2  # seconds between updates
     
     font = Font4x7(DISPLAY_WIDTH, DISPLAY_HEIGHT, kit.set_pixel)
@@ -75,7 +75,7 @@ def demo_scrolling():
     try:
         # Do a brief scrolling demo (limited iterations for the example)
         position = DISPLAY_WIDTH
-        for _ in range(40):  # Scroll for a limited number of frames
+        for _ in range(70):  # Scroll for a limited number of frames
             kit.clear()
             font.text(SCROLL_TEXT, position, 1, COLOR)  # Slight Y offset for better viewing
             kit.render()
